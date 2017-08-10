@@ -307,6 +307,14 @@ function receivedMessage(event) {
         sendAccountLinking(senderID);
         break;
 
+      case 'sheet':
+        // some crazy google shit.
+
+
+        var text = "Things!: ";
+        sendTextMessage(senderID, text);
+        break;
+
       default:
         sendTextMessage(senderID, messageText);
     }
