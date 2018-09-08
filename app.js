@@ -27,7 +27,6 @@ app.use(express.static('public'));
 /*
  * Be sure to setup your config values before running this code. You can 
  * set them using environment variables or modifying the config file in /config.
- *
  */
 
 // App Secret can be retrieved from the App Dashboard
@@ -59,7 +58,6 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
 /*
  * Use your own validation token. Check that the token used in the Webhook 
  * setup is the same token used here.
- *
  */
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
@@ -122,7 +120,6 @@ app.post('/webhook', function (req, res) {
 /*
  * This path is used for account linking. The account linking call-to-action
  * (sendAccountLinking) is pointed to this URL. 
- * 
  */
 app.get('/authorize', function(req, res) {
   var accountLinkingToken = req.query.account_linking_token;
